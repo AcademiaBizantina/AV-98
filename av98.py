@@ -80,6 +80,7 @@ _ABBREVS = {
     "/":    "search",
     "t":    "tour",
     "u":    "up",
+    "home": "home",
 }
 
 _MIME_HANDLERS = {
@@ -1231,6 +1232,9 @@ you'll be able to transparently follow links to Gopherspace!""")
         # If this isn't a mark, treat it as a URL
         else:
             self._go_to_gi(GeminiItem(line))
+
+    def do_home(self, line):
+        self.do_go("gemini://gemini.circumlunar.space")
 
     @needs_gi
     def do_reload(self, *args):
