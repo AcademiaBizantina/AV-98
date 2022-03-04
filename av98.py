@@ -548,7 +548,7 @@ you'll be able to transparently follow links to Gopherspace!""")
         addresses = self._get_addresses(host, port)
 
         # Prepare TLS context
-        protocol = ssl.PROTOCOL_TLS if sys.version_info.minor >=6 else ssl.PROTOCOL_TLSv1_2
+        protocol = ssl.PROTOCOL_TLS_CLIENT if sys.version_info.minor >=6 else ssl.PROTOCOL_TLSv1_2
         context = ssl.SSLContext(protocol)
         # Use CAs or TOFU
         if self.options["tls_mode"] == "ca":
