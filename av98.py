@@ -1352,7 +1352,7 @@ Use 'ls -l' to see URLs."""
 
     def do_gus(self, line):
         """Submit a search query to the GUS search engine."""
-        gus = GeminiItem("gemini://gus.guru/search")
+        gus = GeminiItem("gemini://geminispace.info/search")
         self._go_to_gi(gus.query(line))
 
     def do_history(self, *args):
